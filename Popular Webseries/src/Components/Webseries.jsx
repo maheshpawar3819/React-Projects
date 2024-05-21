@@ -1,18 +1,20 @@
 import React from "react";
 
-const Webseries = () => {
+const Webseries = (props) => {
   return (
     <>
-      <h2 className="heading">Hotstar <span className="Head-span">Specials</span></h2>
+      <h2 className="heading">
+        Hotstar <span className="Head-span">Specials</span>
+      </h2>
 
       <div className="cards">
         <div className="card">
-          <img src="" alt="" className="img_card" />
+          <img src={props.imgsrc} alt="" className="img_card" />
           <div className="card_info">
-            <span className="card_category"></span>
-            <h3 className="card_title"></h3>
-            <a href="">
-              <button>Watch Now</button>
+            <span className="card_category">{props.title}</span>
+            <h3 className="card_title">{props.sname}</h3>
+            <a href={props.link}>
+              <button className="btn">Watch Now</button>
             </a>
           </div>
         </div>
