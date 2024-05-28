@@ -1,24 +1,5 @@
 import React from 'react'
-
-const Restaurentcard = (props) => {
-    //destructuring obj
-  
-  
-    const { img, rtname, Ratings, menu, location } = props.restaurent;
-  
-    return (
-      <div className="card-container">
-        <img src={img} className="rt-img" />
-        <h3 className="card-head">{rtname}</h3>
-        <p id="str-rating">
-          <span className="rating">{Ratings}</span>
-        </p>
-        <p>{menu}</p>
-  
-        <p>{location}</p>
-      </div>
-    );
-  };
+import Restorentcard from './Restorentcard';
 
 const data = [
     {
@@ -98,7 +79,7 @@ const Body = () => {
     <div className="body">
       <div className="rest-container">
         {data.map((restaurent, index) => {
-          return <Restaurentcard key={index} restaurent={restaurent} />;
+          return <Restorentcard key={index} restaurent={restaurent} />;
         })}
       </div>
     </div>
