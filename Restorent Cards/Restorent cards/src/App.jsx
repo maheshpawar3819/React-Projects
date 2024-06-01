@@ -6,22 +6,6 @@ import Header from "./Components/Header";
 import Body from "./Components/Body";
 import Footer from "./Components/Footer";
 
-/*
-Plan:
-*Header
-  -logo
-  -Navitems
-*Body
-  -search
-  -restaurent container
-  -restaurent card
-    -Name of restaurent,Star rating,cuisine,delivery time
-*Footer
-  -Copyright
-  -Links
-  -Address
-  -Contact
-*/
 
 function App() {
   const [count, setCount] = useState(0);
