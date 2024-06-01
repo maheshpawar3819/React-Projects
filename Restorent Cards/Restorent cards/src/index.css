@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #EEEDEB;
 }
 
 .header {
@@ -24,10 +25,10 @@
     width: 100%;
 }
 
-.search-container>button {
+.serach-btn {
     border: none;
     border-radius: 5px;
-    background-color: #874CCC;
+    background-color: #747264;
     margin: 5px;
     width: 100px;
     height: 30px;
@@ -36,7 +37,7 @@
 }
 
 .search-container>button:hover {
-    background-color: #884ccca1;
+    background-color: #3C3633;
 }
 
 .nav-items {
@@ -56,7 +57,11 @@
     font-size: x-large;
     margin-right: 50px;
     cursor: pointer;
-    color: #C65BCF;
+    color: #747264;
+}
+
+.nav-items>ul>li:hover {
+    color: #3C3633;
 }
 
 .logo {
@@ -89,7 +94,8 @@
 
 .card-head {
     color: #414449;
-    margin: 5px;
+    margin: 2px 0px 0px 2px;
+
 }
 
 
@@ -100,7 +106,8 @@
 
 .card-container>p {
     color: #414449;
-    margin: 5px;
+    margin-left: 5px;
+    margin: 0px;
     font-weight: 100;
 }
 
@@ -114,7 +121,10 @@
 }
 
 
-.ft-text{
+.ft-text {
     text-align: center;
 }
 
+.time-span {
+    color: maroon;
+}
