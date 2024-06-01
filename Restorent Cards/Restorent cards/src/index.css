@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #EEEDEB;
 }
 
 .header {
@@ -127,4 +126,19 @@
 
 .time-span {
     color: maroon;
+}
+
+/* filter button design  */
+
+.filter-btn{
+    margin: 5px 5px 5px 95px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    background-color:#747264;
+    color: white;
+}
+
+.filter-btn:hover{
+    background-color: #3C3633;
 }
