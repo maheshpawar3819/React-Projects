@@ -10,13 +10,12 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            const filterdata = restaurent.filter((rest) => rest.Ratings >=4);
+            const filterdata = restaurent.filter((rest) => rest.Ratings >= 4);
             setrestaurent(filterdata);
           }}
         >
           Top Rated Restorents
         </button>
-
       </div>
       <div className="rest-container">
         {restaurent.map((restaurent, index) => {

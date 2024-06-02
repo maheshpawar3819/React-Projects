@@ -56,7 +56,7 @@ let data = [
     location: "Baramati",
   },
   {
-    img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/wkmehhokjp57lup8ij1s",
+    img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/d2b39bda3a57f79ddf74dc0a2f4eb37c",
     rtname: "Behrouz Biryani",
     Ratings: 2.5,
     time: "30-35 min",
@@ -78,7 +78,7 @@ let data = [
     time: "30-35 min",
     menu: "Tandoor",
     location: "Phaltan",
-  },
+  }
 ];
 
 export default data;
