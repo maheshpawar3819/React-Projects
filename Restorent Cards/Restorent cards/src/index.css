@@ -76,7 +76,7 @@
     margin-right: 100px;
 }
 
-.login-btn{
+.login-btn {
     padding: 5px 30px;
     border-radius: 5px;
     background-color: #C08B5C;
@@ -85,7 +85,7 @@
     color: white;
 }
 
-.login-btn:hover{
+.login-btn:hover {
     background-color: #dc9e69;
 }
 
@@ -139,6 +139,10 @@
     flex-wrap: wrap;
     column-gap: 10px;
     justify-content: center;
+}
+
+.search-btns{
+    display: flex;
 }
 
 /* footer section */
