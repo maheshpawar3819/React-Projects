@@ -4,12 +4,14 @@ import data from "./Utlities/Apidata";
 const Body = () => {
   const [restaurent, setrestaurent] = useState(data);
 
-  // Conditional Radering 
+  // Conditional Radering
   // if(restaurent.length===0){
   //   return <h1>Loading...</h1>
   // }
 
-  return (
+  return restaurent.length === 0 ? (
+    <h1>Loading</h1>
+  ) : (
     <div className="body">
       <div>
         <button
