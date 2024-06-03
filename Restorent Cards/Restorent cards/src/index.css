@@ -64,6 +64,7 @@
 
 /* header section  */
 
+/* body container  */
 .card-container {
     border-radius: 20px;
     padding: 5px;
@@ -107,23 +108,31 @@
 
 .rest-container {
     height: auto;
-    width: 100%;
+    width: 95vw;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 10px;
+    column-gap: 25px;
+    justify-content: center;
+    margin: auto;
+    
+}
+
+.search-btns {
+    display: flex;
+    gap: 5px;
+    width: 95vw;
+    margin: auto;
     justify-content: center;
 }
 
-.search-btns{
-    display: flex;
-    gap: 30px;
-}
-
-.input1{
+.input1 {
     padding: 4px;
     letter-spacing: 5px;
     border: 1px solid gray;
     border-radius: 5px;
+    font-weight: bold;
+    color: #C08B5C;
+    font-size: large;
 }
 
 .serach-btn {
@@ -135,6 +144,7 @@
     height: 34px;
     cursor: pointer;
     color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .search-container>button:hover {
@@ -154,14 +164,30 @@
 /* filter button design  */
 
 .filter-btn {
-    margin: 5px 5px 5px 95px;
     border-radius: 10px;
     border: none;
     padding: 5px;
     background-color: #747264;
     color: white;
+    height: auto;
+    margin: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .filter-btn:hover {
+    background-color: #3C3633;
+}
+
+.allrest-btn {
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background-color: #747264;
+    color: white;
+    height: auto;
+    margin: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;}
+
+.allrest-btn:hover {
     background-color: #3C3633;
 }
