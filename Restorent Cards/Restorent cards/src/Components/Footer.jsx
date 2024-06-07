@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="ft-container">
-      <h2 className="ft-text"> @All Copyright Receved Food Restaurent</h2>
+      <h2 className="ft-text"> @All Copyright Receved Food Restaurant</h2>
     </div>
   );
 };
