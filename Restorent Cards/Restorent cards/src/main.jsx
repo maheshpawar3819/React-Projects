@@ -6,21 +6,33 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Menu from "./Components/Menu.jsx";
 import Aboutus from "./Components/Aboutus.jsx";
 import Error from "./Components/Error.jsx";
+import Body from "./Components/Body.jsx";
+
 
 const approuter = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App/>,
     errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+        errorElement: <Error />,
+      },
+      {
+        path: "/aboutus",
+        element: <Aboutus />,
+        errorElement: <Error />,
+      },
+      {
+        path: "/menu",
+        element: <Menu />,
+        errorElement: <Error />,
+      },
+    ],
   },
   {
-    path: "/menu",
-    element: <Menu />,
-    errorElement: <Error />,
-  },
-  {
-    path: "/aboutus",
-    element: <Aboutus />,
     errorElement: <Error />,
   },
 ]);

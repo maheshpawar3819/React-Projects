@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from './Header'
+
 const Menu = () => {
   return (
     <div>
       <div>
-        <Header/>
+      <h1>menu</h1>
       </div>
     </div>
   )
