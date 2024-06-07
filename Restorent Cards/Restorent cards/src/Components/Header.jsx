@@ -13,7 +13,7 @@ const Header = () => {
       <div className="nav-items">
         <ul>
           <li>Home</li>
-          <li>Menu</li>
+          <li>Restaurents</li>
           <li>About Us</li>
           <li>Cart</li>
         </ul>
