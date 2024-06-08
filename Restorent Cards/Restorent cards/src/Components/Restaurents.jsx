@@ -1,6 +1,23 @@
 import React from "react";
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 const Restaurents = () => {
+  const fetchrestdata = () => {
+    axios
+      .get(
+        "https://www.swiggy.com/mapi/homepage/getCards?lat=18.61610&lng=73.72860"
+      )
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    fetchrestdata();
+  }, []);
   return (
     <div className="restaurents">
       <div className="header-content">
@@ -21,8 +38,9 @@ const Restaurents = () => {
         </div>
         <div className="r-allrest-div">
           <button className="r-allrest-btn">All Retaurents</button>
-          </div>
+        </div>
       </div>
+      <div className="rest-container"></div>
     </div>
   );
 };

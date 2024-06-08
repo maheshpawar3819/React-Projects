@@ -22,7 +22,7 @@ const Body = () => {
             setrestaurent(filterdata);
           }}
         >
-          Top Rated Restorents
+          Top Rated Restaurents
         </button>
         <div className="search-container">
           <input
