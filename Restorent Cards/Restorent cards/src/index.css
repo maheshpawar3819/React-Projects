@@ -33,6 +33,16 @@
     color: #747264;
 }
 
+.nav-items>ul>li>a {
+    text-decoration: none;
+    color: #747264;
+}
+
+.nav-items>ul>li>a:hover {
+    color: #DC9E69;
+    text-decoration: underline;
+}
+
 .nav-items>ul>li:hover {
     color: #3C3633;
 
@@ -116,7 +126,7 @@
     column-gap: 25px;
     justify-content: center;
     margin: auto;
-    
+
 }
 
 .search-btns {
@@ -194,3 +204,76 @@
 .allrest-btn:hover {
     background-color: #3C3633;
 }
+
+
+/* restaurents css */
+
+.header-content {
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+    width: 60vw;
+    margin: auto;
+    height: auto;
+    margin-top: 5px;
+}
+
+.r-top-restbtn {
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    background-color: #747264;
+    color: white;
+    height: auto;
+    margin: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.r-top-restbtn:hover{
+    background-color: #3C3633;
+}
+
+.r-input {
+    padding: 4px;
+    letter-spacing: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #C08B5C;
+    font-size: large;
+}
+
+.r-serach-btn{
+    border: none;
+    border-radius: 5px;
+    background-color: #C08B5C;
+    margin: 5px;
+    width: 100px;
+    height: 34px;
+    cursor: pointer;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.r-serach-btn:hover{
+    background-color: #3C3633;
+}
+
+.r-allrest-btn{
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background-color: #747264;
+    color: white;
+    height: auto;
+    margin: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.r-allrest-btn:hover{
+    background-color: #3C3633;
+}
+
+
+/* restaurents css */

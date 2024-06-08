@@ -1,11 +1,30 @@
-import React from 'react'
+import React from "react";
 
 const Restaurents = () => {
   return (
-    <div>
-      <h1>Restaurents</h1>
+    <div className="restaurents">
+      <div className="header-content">
+        <button className="r-top-restbtn">Top Rated Restaurents</button>
+        <div className="r-search-container">
+          <input type="text" placeholder="Search..." className="r-input" />
+          <button className="r-serach-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+          </button>
+        </div>
+        <div className="r-allrest-div">
+          <button className="r-allrest-btn">All Retaurents</button>
+          </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Restaurents
+export default Restaurents;
