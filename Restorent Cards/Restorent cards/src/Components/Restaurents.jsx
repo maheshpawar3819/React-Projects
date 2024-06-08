@@ -1,20 +1,27 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Cards from "./Cards/Cards";
 const Restaurents = () => {
+  const [restaurentlist, setrestaurentlist] = useState([]);
   const fetchrestdata = () => {
     axios
       .get(
         "https://www.swiggy.com/mapi/homepage/getCards?lat=18.61610&lng=73.72860"
       )
-      .then((data) => {
-        console.log(data);
+      .then((response) => {
+        console.log(response);
+        setrestaurentlist(
+          response?.data?.data?.success?.cards[3]?.gridWidget?.gridElements
+            ?.infoWithStyle?.restaurants
+        );
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
+ 
   useEffect(() => {
     fetchrestdata();
   }, []);
@@ -40,7 +47,12 @@ const Restaurents = () => {
           <button className="r-allrest-btn">All Retaurents</button>
         </div>
       </div>
-      <div className="rest-container"></div>
+      <div className="rest-container">
+        {restaurentlist.map((data) => {
+          return <Cards key={data.info.id} restdata={data}/> ;
+        })}
+      </div>
+      
     </div>
   );
 };
