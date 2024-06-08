@@ -15,13 +15,14 @@ const Restaurents = () => {
           response?.data?.data?.success?.cards[3]?.gridWidget?.gridElements
             ?.infoWithStyle?.restaurants
         );
+        console.log(response?.data?.data?.success?.cards[3]?.gridWidget?.gridElements
+          ?.infoWithStyle?.restaurants)
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
- 
   useEffect(() => {
     fetchrestdata();
   }, []);
@@ -49,10 +50,9 @@ const Restaurents = () => {
       </div>
       <div className="rest-container">
         {restaurentlist.map((data) => {
-          return <Cards key={data.info.id} restdata={data}/> ;
+          return <Cards key={data.info.id} restdata={data} />;
         })}
       </div>
-      
     </div>
   );
 };
