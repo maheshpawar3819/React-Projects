@@ -7,11 +7,14 @@ const Cards = ({ restaurent }) => {
     costForTwo = "N/A",
     cuisines = [],
     areaName = "Unknown Area",
-    imageUrl = "", // Assuming there's an imageUrl property in restdata.info
+    cloudinaryImageId = "",
   } = restaurent?.info || {};
   return (
     <div className="cd-main">
-      <img src="" alt="" />
+      <img
+        src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`}
+        alt=""
+      />
       <h4>{name}</h4>
       <p>{avgRating}</p>
       <h6>Cost for two {costForTwo}</h6>

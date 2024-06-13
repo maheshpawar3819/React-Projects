@@ -28,7 +28,9 @@ const Restaurents = () => {
   useEffect(() => {
     fetchrestdata();
   }, []);
-  return (
+  return restaurentlist === 0 ? (
+    <h1>Loading..</h1>
+  ) : (
     <div className="restaurents">
       <div className="header-content">
         <button className="r-top-restbtn">Top Rated Restaurents</button>
