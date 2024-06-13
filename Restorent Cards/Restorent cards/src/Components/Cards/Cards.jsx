@@ -10,12 +10,12 @@ const Cards = ({ restaurent }) => {
     imageUrl = "", // Assuming there's an imageUrl property in restdata.info
   } = restaurent?.info || {};
   return (
-    <div>
+    <div className="cd-main">
       <img src="" alt="" />
-      <h2>{name}</h2>
+      <h4>{name}</h4>
       <p>{avgRating}</p>
       <h6>Cost for two {costForTwo}</h6>
-      <p>{cuisines.join(",")}</p>
+      <p className="cuisines">{cuisines.join(",")}</p>
       <h5>{areaName}</h5>
     </div>
   );

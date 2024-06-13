@@ -277,3 +277,21 @@
 
 
 /* restaurents css */
+
+/* cards component  */
+
+.cd-main{
+    box-sizing: border-box;
+    width: 300px; /* Set appropriate width */
+    padding: 16px;
+    margin: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    word-wrap: break-word;
+}
+
+/* cards component  */
