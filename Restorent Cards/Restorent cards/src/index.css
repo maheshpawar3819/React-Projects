@@ -230,7 +230,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.r-top-restbtn:hover{
+.r-top-restbtn:hover {
     background-color: #3C3633;
 }
 
@@ -244,7 +244,7 @@
     font-size: large;
 }
 
-.r-serach-btn{
+.r-serach-btn {
     border: none;
     border-radius: 5px;
     background-color: #C08B5C;
@@ -256,11 +256,11 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.r-serach-btn:hover{
+.r-serach-btn:hover {
     background-color: #3C3633;
 }
 
-.r-allrest-btn{
+.r-allrest-btn {
     border-radius: 10px;
     border: none;
     padding: 10px;
@@ -271,7 +271,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.r-allrest-btn:hover{
+.r-allrest-btn:hover {
     background-color: #3C3633;
 }
 
@@ -280,18 +280,60 @@
 
 /* cards component  */
 
-.cd-main{
+.cd-main {
     box-sizing: border-box;
-    width: 300px; /* Set appropriate width */
-    padding: 16px;
-    margin: 16px;
-    border: 1px solid #ddd;
+    width: 300px;
+    /* Set appropriate width */
+    padding: 10px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #fff;
     word-wrap: break-word;
+    cursor: pointer;
+}
+
+.cd-main:hover {
+    border: 1px solid black;
+}
+
+.cd-img {
+    border-radius: 10px;
+    height: 300px;
+    transition: transform 0.3s ease;
+    /* Smooth transition */
+}
+
+.cd-img:hover {
+    transform: scale(1.05);
+    /* Scale up the image on hover */
+}
+
+.cd-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+.cd-rating {
+    margin: 0;
+}
+
+.cd-cost {
+    margin: 0;
+    font-weight: 700;
+}
+
+.cd-cuisines {
+    margin: 0;
+}
+
+.cd-areaname {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* cards component  */
