@@ -12,11 +12,11 @@ const Restaurents = () => {
       .then((response) => {
         console.log(response);
         setrestaurentlist(
-          response?.data?.data?.success?.cards[3]?.gridWidget?.gridElements
+          response?.data?.data?.success?.cards[1]?.gridWidget?.gridElements
             ?.infoWithStyle?.restaurants
         );
         console.log(
-          response?.data?.data?.success?.cards[3]?.gridWidget?.gridElements
+          response?.data?.data?.success?.cards[1]?.gridWidget?.gridElements
             ?.infoWithStyle?.restaurants
         );
       })

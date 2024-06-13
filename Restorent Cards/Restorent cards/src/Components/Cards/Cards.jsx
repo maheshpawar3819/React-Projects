@@ -1,8 +1,14 @@
 import React from "react";
 
-const Cards = ({ restdata }) => {
-  const { name, avgRating, costForTwo, cuisines, areaName } = restdata?.info;
-
+const Cards = ({ restaurent }) => {
+  const {
+    name = "Unknown Restaurant",
+    avgRating = "N/A",
+    costForTwo = "N/A",
+    cuisines = [],
+    areaName = "Unknown Area",
+    imageUrl = "", // Assuming there's an imageUrl property in restdata.info
+  } = restaurent?.info || {};
   return (
     <div>
       <img src="" alt="" />
