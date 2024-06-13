@@ -11,7 +11,9 @@ const Body = () => {
   //   return <h1>Loading...</h1>w
   // }
 
-  // if (!useOnlinestate) return <h1>Looks like you are offline</h1>;
+ let online=useOnlinestate();
+
+  if (!online) return <h1>Looks like you are offline</h1>;
   return restaurent.length === 0 ? (
     <h1>Loading....</h1>
   ) : (
