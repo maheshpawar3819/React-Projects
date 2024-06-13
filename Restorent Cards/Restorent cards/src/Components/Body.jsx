@@ -1,15 +1,17 @@
 import Restorentcard from "./Restorentcard";
 import { useState } from "react";
 import data from "./Utlities/Apidata";
+import useOnlinestate from "./Utlities/useOnlinestate";
 const Body = () => {
   const [restaurent, setrestaurent] = useState(data);
   const [serach, setSearch] = useState("");
   console.log("body rander");
   // Conditional Radering
   // if(restaurent.length===0){
-  //   return <h1>Loading...</h1>
+  //   return <h1>Loading...</h1>w
   // }
 
+  // if (!useOnlinestate) return <h1>Looks like you are offline</h1>;
   return restaurent.length === 0 ? (
     <h1>Loading....</h1>
   ) : (
