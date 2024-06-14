@@ -10,7 +10,7 @@ function App() {
     <>
       <Header />
       <Outlet />
-      <Footer/>
+      {/* <Footer/> */}
       {/* <Footer /> */}
       {/* <Footer /> */}
     </>

@@ -16,7 +16,7 @@ const Restaurents = () => {
       const restaurents =
         fetch?.data?.data?.success?.cards[1]?.gridWidget?.gridElements
           ?.infoWithStyle?.restaurants;
-          console.log(restaurents)
+      console.log(restaurents);
       setrestaurentlist(restaurents || []);
       setAllrest(restaurents || []);
       setLoading(false);
