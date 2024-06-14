@@ -4,6 +4,8 @@ import axios from "axios";
 import Cards from "./Cards/Cards";
 const Restaurents = () => {
   const [restaurentlist, setrestaurentlist] = useState([]);
+  
+
   const fetchrestdata = () => {
     axios
       .get(
@@ -29,12 +31,24 @@ const Restaurents = () => {
     fetchrestdata();
   }, []);
 
+  const filterrest=() => {
+    const filtd=restaurentlist.filter((rest) => {
+      return rest.info.avgRating>=4;
+    })
+    console.log(filtd)
+    setrestaurentlist(filtd);
+  }
+
+
   return restaurentlist === 0 ? (
     <h1>Loading..</h1>
   ) : (
     <div className="restaurents">
       <div className="header-content">
-        <button className="r-top-restbtn">
+        <button
+          className="r-top-restbtn"
+          onClick={filterrest}
+        >
           <i className="bi bi-filter"></i>Top Rated Restaurents
         </button>
         <div className="r-search-container">
@@ -44,7 +58,7 @@ const Restaurents = () => {
           </button>
         </div>
         <div className="r-allrest-div">
-          <button className="r-allrest-btn">All Retaurents</button>
+          <button className="r-allrest-btn" >All Retaurents</button>
         </div>
       </div>
       <div className="rest-container">
