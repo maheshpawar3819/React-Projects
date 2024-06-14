@@ -62,10 +62,11 @@ const Restaurents = () => {
           <button
             className="r-serach-btn"
             onClick={() => {
-              const filterrest = restaurentlist.filter((rest) => {
+              const result = restaurentlist.filter((rest) => {
                 return rest.name.toLowerCase().includes(serach.toLowerCase());
               });
-              setrestaurentlist(filterrest);
+
+              setrestaurentlist(result);
             }}
           >
             <i className="bi bi-search"></i>
