@@ -16,6 +16,7 @@ const Restaurents = () => {
       const restaurents =
         fetch?.data?.data?.success?.cards[1]?.gridWidget?.gridElements
           ?.infoWithStyle?.restaurants;
+          console.log(restaurents)
       setrestaurentlist(restaurents || []);
       setAllrest(restaurents || []);
       setLoading(false);
@@ -41,6 +42,13 @@ const Restaurents = () => {
     setrestaurentlist(allrest);
   };
 
+  const searchbtn = () => {
+    const data = restaurentlist.filter((ele) => {
+      return ele.name.toLowerCase().includes(serach.toLowerCase());
+    });
+    setrestaurentlist(data);
+  };
+
   return restaurentlist.length === 0 ? (
     <h1>Loading..</h1>
   ) : (
@@ -59,16 +67,7 @@ const Restaurents = () => {
               setSearch(event.target.value);
             }}
           />
-          <button
-            className="r-serach-btn"
-            onClick={() => {
-              const result = restaurentlist.filter((rest) => {
-                return rest.name.toLowerCase().includes(serach.toLowerCase());
-              });
-
-              setrestaurentlist(result);
-            }}
-          >
+          <button className="r-serach-btn" onClick={searchbtn}>
             <i className="bi bi-search"></i>
           </button>
         </div>
