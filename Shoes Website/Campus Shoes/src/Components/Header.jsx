@@ -1,5 +1,5 @@
 import React from "react";
-import { cart } from "./Utils/icons";
+import { cart, logo } from "./Utils/icons";
 const Header = () => {
   return (
     <div className="fixed w-full top-0 bg-white z-10">
@@ -16,8 +16,8 @@ const Header = () => {
         </div>
         <div className="">
           <img
-            src="https://www.campusshoes.com/cdn/shop/files/LOGO_e329524e-19ed-47b9-81cf-9e1ef658c789_280x.jpg?v=1718362815"
-            alt=""
+            src={logo}
+            alt="logo image"
             className="w-52"
           />
         </div>
