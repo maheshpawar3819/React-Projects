@@ -1,12 +1,14 @@
 import React from "react";
-
+import { search } from "./Utils/icons";
 const Header = () => {
   return (
-    <div>
-      <div className="flex justify-between border-b-2 p-5 px-2">
-        <div>
-          <input type="text" />
-          <button>Search</button>
+    <div className="fixed w-full top-0 bg-white z-10">
+      <div className="flex justify-between border-b-2 p-2 px-2 ">
+        <div className="p-2">
+          <input type="text" className="border rounded-md p-1" />
+          <button className="bg-slate-500 rounded-md text-white drop-shadow-xl hover size-8 px-2">
+           {search}
+          </button>
         </div>
         <div className="">
           <img
@@ -15,9 +17,13 @@ const Header = () => {
             className="w-52"
           />
         </div>
-        <div>
-          <button>Login</button>
-          <button>Sign in</button>
+        <div className="p-2">
+          <button className="bg-slate-500 ml-2 p-1 rounded-md px-2 text-white drop-shadow-xl hover:bg-slate-800">
+            Login
+          </button>
+          <button className="bg-slate-500 ml-2 p-1 rounded-md px-2 text-white drop-shadow-xl hover:bg-slate-800">
+            Sign in
+          </button>
         </div>
       </div>
       <div className="">
