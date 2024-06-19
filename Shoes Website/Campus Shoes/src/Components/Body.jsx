@@ -1,9 +1,9 @@
-import React, { useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import { banner } from "./Utils/icons";
 import axios from "axios";
 import Exclusive from "./Exclusive";
 const Body = () => {
-    const [exclusive,setExclusive]=useState([]);
+  const [exclusive, setExclusive] = useState([]);
   const fetch = () => {
     axios
       .get(
@@ -11,7 +11,7 @@ const Body = () => {
       )
       .then((response) => {
         console.log(response);
-
+        setExclusive(response?.data?.items || []);
       })
       .catch((error) => {
         console.log("woops something wants wrong", error);
@@ -28,7 +28,9 @@ const Body = () => {
         <img src={banner} alt="Banner image" />
       </div>
       <div>
-        <Exclusive/>
+        {exclusive.map((data) => {
+          return <Exclusive key={data.id} exclusive={data} />;
+        })}
       </div>
     </div>
   );
