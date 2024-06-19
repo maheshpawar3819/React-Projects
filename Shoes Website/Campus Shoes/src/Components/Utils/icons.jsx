@@ -13,3 +13,5 @@ export const cart = (
 
 
 export const logo="https://www.campusshoes.com/cdn/shop/files/LOGO_e329524e-19ed-47b9-81cf-9e1ef658c789_280x.jpg?v=1718362815"
+
+export const banner="https://www.campusshoes.com/cdn/shop/collections/CAtegoryBanner_1728x.jpg?v=1717579252%201728w%20360h,"

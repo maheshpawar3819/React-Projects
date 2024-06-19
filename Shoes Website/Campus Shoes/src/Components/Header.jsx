@@ -32,7 +32,7 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div className="">
+      <div className="pb-2">
         <ul className="flex justify-evenly tracking-widest text-gray-700 text-xl  pt-3">
           <li className="cursor-pointer hover:text-orange-700">Mens</li>
           <li className="cursor-pointer hover:text-orange-700">Womens</li>
