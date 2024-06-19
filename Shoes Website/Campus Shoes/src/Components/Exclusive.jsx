@@ -1,12 +1,13 @@
 import React from "react";
 
-const Exclusive = (exclusive) => {
-  const { url, urlName } = exclusive?.info || {};
-
+const Exclusive = ({exclusive}) => {
+  const {  urlName ,images } = exclusive || {};
+  const img=images[0]?.url;
+  console.log(img)
   return (
     <div>
       <div>
-        <img src={url} alt="" />
+        <img src={img} alt="" />
       </div>
       <div>
         <button>Quick Buy</button>

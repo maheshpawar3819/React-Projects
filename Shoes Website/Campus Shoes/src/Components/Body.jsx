@@ -4,6 +4,7 @@ import axios from "axios";
 import Exclusive from "./Exclusive";
 const Body = () => {
   const [exclusive, setExclusive] = useState([]);
+
   const fetch = () => {
     axios
       .get(
@@ -11,7 +12,8 @@ const Body = () => {
       )
       .then((response) => {
         console.log(response);
-        setExclusive(response?.data?.items || []);
+        // console.log(response?.data?.data?.items[0].title);
+        setExclusive(response?.data?.data?.items || []);
       })
       .catch((error) => {
         console.log("woops something wants wrong", error);
