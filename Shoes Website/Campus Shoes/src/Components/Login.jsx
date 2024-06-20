@@ -9,7 +9,7 @@ import {
 const Login = () => {
   return (
     <div className="box-border mt-32 h-full">
-      <div className="border-gray-300 border-2 h-auto w-96  p-3 m-auto mt-80 rounded-lg shadow-xl">
+      <div className="border-gray-300 border-2 h-auto w-96  p-3 m-auto mt-60 rounded-lg shadow-xl">
         <p className="text-center text-3xl font-sans m-4 tracking-widest">
           Login
         </p>
