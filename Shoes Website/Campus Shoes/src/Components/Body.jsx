@@ -29,7 +29,7 @@ const Body = () => {
       <div>
         <img src={banner} alt="Banner image" />
       </div>
-      <div>
+      <div className="flex flex-wrap justify-center  gap-4 w-full">
         {exclusive.map((data) => {
           return <Exclusive key={data.id} exclusive={data} />;
         })}

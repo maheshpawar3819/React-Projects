@@ -7,7 +7,7 @@ const Exclusive = ({ exclusive }) => {
   const option = options[1]?.values;
 
   return (
-    <div className="border-solid border-2 border-black h-auto w-72 p-1">
+    <div className=" cursor-pointer hover:border-gray-200 hover:border-2 rounded-md h-auto w-72 p-1">
       <div>
         <img src={img} alt="" className="size-80" />
       </div>
