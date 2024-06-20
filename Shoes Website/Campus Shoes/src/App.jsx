@@ -4,6 +4,7 @@ import './App.css'
 import Body from './Components/Body'
 import Mens from './Components/Mens'
 import Womens from './Components/Womens'
+import Kids from './Components/Kids'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -12,7 +13,8 @@ function App() {
     <Header/> 
     {/* <Body/> */}
     {/* <Mens/> */}
-    <Womens/>
+    {/* <Womens/> */}
+    <Kids/>
     </>
   )
 }

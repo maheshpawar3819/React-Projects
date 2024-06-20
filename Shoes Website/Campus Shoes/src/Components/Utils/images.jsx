@@ -3,3 +3,6 @@ export const mensbanner =
 
 export const womensbanner =
   "//www.campusshoes.com/cdn/shop/collections/bg_slideshow_h1_1_1728x.jpg?v=1712379074 1728w 360h";
+
+export const kidsbanner =
+  "//www.campusshoes.com/cdn/shop/collections/KidsCollection_CategoryImage_1728x.jpg?v=1678798890 1728w 360h";
