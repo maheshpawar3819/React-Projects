@@ -1,0 +1,1 @@
+export const mensbanner="https://www.campusshoes.com/cdn/shop/collections/MEN_Main_category_5_1728x.jpg?v=1687324441%201728w%20360h"
