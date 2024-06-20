@@ -9,6 +9,7 @@ import Mens from "./Components/Mens.jsx";
 import Womens from "./Components/Womens.jsx";
 import Sandals from "./Components/Sandals.jsx";
 import Kids from "./Components/Kids.jsx";
+import Login from "./Components/Login.jsx";
 
 const approuter = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const approuter = createBrowserRouter([
       {
         path: "/sandals",
         element: <Sandals />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },

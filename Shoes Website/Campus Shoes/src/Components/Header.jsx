@@ -24,7 +24,7 @@ const Header = () => {
             {cart}
           </div>
           <button className="bg-slate-500 ml-4 p-1 rounded-md px-2 text-white drop-shadow-xl hover:bg-slate-800 ">
-            Login
+           <Link to={"/login"}>Login</Link> 
           </button>
           <button className="bg-slate-500 ml-5 p-1 rounded-md px-2 text-white drop-shadow-xl hover:bg-slate-800 ">
             Sign in
