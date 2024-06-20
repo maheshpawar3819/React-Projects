@@ -3,6 +3,7 @@ import Sandalscard from "./Sandalscard";
 import { sandalsbanner } from "./Utils/images";
 import { useEffect } from "react";
 import axios from "axios";
+import Shimmer from "./Shimmer";
 const Sandals = () => {
   const [data, setData] = useState([]);
   const fetchapi = () => {
@@ -22,7 +23,9 @@ const Sandals = () => {
   useEffect(() => {
     fetchapi();
   }, []);
-  return (
+  return data.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="box-border mt-24">
       <div>
         <img src={sandalsbanner} alt="" />

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { kidsbanner } from "./Utils/images";
 import axios from "axios";
 import Kidscard from "./Kidscard";
+import Shimmer from "./Shimmer";
 const Kids = () => {
   const [data, setData] = useState([]);
 
@@ -23,7 +24,9 @@ const Kids = () => {
     fetchapi();
   }, []);
 
-  return (
+  return data.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="box-border mt-24">
       <div>
         <img src={kidsbanner} alt="" />

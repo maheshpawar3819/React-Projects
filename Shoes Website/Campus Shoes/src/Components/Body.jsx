@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { banner } from "./Utils/icons";
 import axios from "axios";
 import Exclusive from "./Exclusive";
+import Shimmer from "./Shimmer";
 const Body = () => {
   const [exclusive, setExclusive] = useState([]);
 
@@ -24,7 +25,9 @@ const Body = () => {
     fetch();
   }, []);
 
-  return (
+  return exclusive.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="box-border mt-24">
       <div>
         <img src={banner} alt="Banner image" />

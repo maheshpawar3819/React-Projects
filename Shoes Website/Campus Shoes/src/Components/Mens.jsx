@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { mensbanner } from "./Utils/images";
 import axios from "axios";
 import Menscard from "./Menscard";
+import Shimmer from "./Shimmer";
 
 const Mens = () => {
   const [data, setData] = useState([]);
@@ -24,13 +25,15 @@ const Mens = () => {
     fetchapi();
   }, []);
 
-  return (
+  return data.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="box-border mt-24">
       <div>
         <img src={mensbanner} alt="" />
       </div>
       <div className="flex flex-wrap justify-center  gap-4 w-full">
-        {data.map((resp,index) => {
+        {data.map((resp, index) => {
           return <Menscard key={index} data={resp} />;
         })}
       </div>

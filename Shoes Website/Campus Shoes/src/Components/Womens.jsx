@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { womensbanner } from "./Utils/images";
 import axios from "axios";
 import Womenscard from "./Womenscard";
+import Shimmer from "./Shimmer";
 const Womens = () => {
   const [data, setData] = useState([]);
 
@@ -22,7 +23,9 @@ const Womens = () => {
     fetchapi();
   }, []);
 
-  return (
+  return data.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="box-border mt-24">
       <div>
         <img src={womensbanner} alt="" />

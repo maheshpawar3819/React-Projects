@@ -1,5 +1,6 @@
 import React from "react";
 import { cart, logo } from "./Utils/icons";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="fixed w-full top-0 bg-white z-10">
@@ -15,15 +16,13 @@ const Header = () => {
           </button>
         </div>
         <div className="">
-          <img
-            src={logo}
-            alt="logo image"
-            className="w-52"
-          />
+          <img src={logo} alt="logo image" className="w-52" />
         </div>
-     
+
         <div className="p-1 flex">
-          <div className="self-center p-1 ml-5 hover:text-orange-700 cursor-pointer">{cart}</div>
+          <div className="self-center p-1 ml-5 hover:text-orange-700 cursor-pointer">
+            {cart}
+          </div>
           <button className="bg-slate-500 ml-4 p-1 rounded-md px-2 text-white drop-shadow-xl hover:bg-slate-800 ">
             Login
           </button>
@@ -34,10 +33,21 @@ const Header = () => {
       </div>
       <div className="pb-2">
         <ul className="flex justify-evenly tracking-widest text-gray-700 text-xl  pt-3">
-          <li className="cursor-pointer hover:text-orange-700">Mens</li>
-          <li className="cursor-pointer hover:text-orange-700">Womens</li>
-          <li className="cursor-pointer hover:text-orange-700">Kids</li>
-          <li className="cursor-pointer hover:text-orange-700">Sandels</li>
+          <li className="cursor-pointer hover:text-orange-700">
+            <Link to={"/"}>New Arrivals</Link>
+          </li>
+          <li className="cursor-pointer hover:text-orange-700">
+            <Link to={"/mens"}>Mens</Link>
+          </li>
+          <li className="cursor-pointer hover:text-orange-700">
+            <Link to={"/womens"}>Womens</Link>
+          </li>
+          <li className="cursor-pointer hover:text-orange-700">
+            <Link to={"/kids"}>Kids</Link>
+          </li>
+          <li className="cursor-pointer hover:text-orange-700">
+            <Link to={"/sandals"}>Sandels</Link>
+          </li>
         </ul>
       </div>
     </div>
