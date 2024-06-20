@@ -6,3 +6,6 @@ export const womensbanner =
 
 export const kidsbanner =
   "//www.campusshoes.com/cdn/shop/collections/KidsCollection_CategoryImage_1728x.jpg?v=1678798890 1728w 360h";
+
+export const sandalsbanner =
+  " //www.campusshoes.com/cdn/shop/collections/open_Footwear_3_1728x.jpg?v=1712378636 1728w 360h";
