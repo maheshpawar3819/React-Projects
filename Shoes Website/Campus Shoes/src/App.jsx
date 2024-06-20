@@ -7,12 +7,14 @@ import Womens from "./Components/Womens";
 import Kids from "./Components/Kids";
 import Sandals from "./Components/Sandals";
 import Shimmer from "./Components/Shimmer";
+import { Outlet } from "react-router-dom";
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
       <Header />
+      <Outlet/>
       {/* <Body /> */}
 
       {/* 
@@ -20,7 +22,7 @@ function App() {
     <Womens/>
     <Kids/>
     <Sandals/> */}
-      <Shimmer />
+      {/* <Shimmer /> */}
     </>
   );
 }
