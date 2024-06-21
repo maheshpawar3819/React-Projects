@@ -1,13 +1,13 @@
 import React from "react";
 import { cart, logo } from "./Utils/icons";
 import { Link } from "react-router-dom";
-import Search from "./Search"
+import Search from "./Search";
 const Header = () => {
   return (
     <div className="fixed w-full top-0 bg-white z-10">
       <div className="flex justify-between border-b-2 p-2 px-2 ">
         <div className="p-2">
-          <Search/>
+          <Search />
         </div>
         <div className="">
           <img src={logo} alt="logo image" className="w-52" />
@@ -17,10 +17,10 @@ const Header = () => {
           <div className="self-center p-1 ml-5 hover:text-orange-700 cursor-pointer">
             {cart}
           </div>
-          <button className="bg-slate-500 ml-4 p-1 rounded-md px-2 text-white drop-shadow-xl hover:bg-slate-800 ">
+          <button className="bg-slate-500 ml-4 p-1 rounded-md px-3 tracking-wider text-white drop-shadow-xl hover:bg-slate-800 ">
             <Link to={"/login"}>Login</Link>
           </button>
-          <button className="bg-slate-500 ml-5 p-1 rounded-md px-2 text-white drop-shadow-xl hover:bg-slate-800 ">
+          <button className="bg-slate-500 ml-5 p-1 rounded-md px-3 tracking-wider text-white drop-shadow-xl hover:bg-slate-800 ">
             Sign in
           </button>
         </div>
