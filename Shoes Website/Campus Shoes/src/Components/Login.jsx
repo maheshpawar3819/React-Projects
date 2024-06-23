@@ -21,7 +21,7 @@ const Login = () => {
         <input
           type="text"
           w-72
-          className="border-black border-2 w-4/5 p-1 m-2 rounded-md ring-offset-4 "
+          className="border-black border-2 w-4/5 p-1 m-2 rounded-md "
           placeholder="type your username"
         />
         <br />
