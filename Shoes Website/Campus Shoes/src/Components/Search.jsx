@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { searchbtn } from "./Utils/icons";
 const Search = () => {
-    const [search,setSearch]=useState("");
+  const [search, setSearch] = useState("");
 
-    const get=(dta) => {
-        let grab=dta.target.value;
-        console.log(grab);
-        // setSearch(grab);
-    }
+  const get = (dta) => {
+    let grab = dta.target.value;
+    console.log(grab);
+    // setSearch(grab);
+  };
 
-    const chlick =() => {
-        console.log("clicked")
-    }
+  const chlick = () => {
+    console.log("clicked");
+  };
 
   return (
     <div>
