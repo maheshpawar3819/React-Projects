@@ -13,7 +13,7 @@ const Login = () => {
         <p className="text-center text-3xl font-sans m-4 tracking-widest">
           Login
         </p>
-        <label htmlFor="" className="text-lg font-sans ml-6">
+        <label htmlFor="username" className="text-lg font-sans ml-6">
           User Name
         </label>
         <br />
@@ -23,9 +23,10 @@ const Login = () => {
           w-72
           className="border-black border-2 w-4/5 p-1 m-2 rounded-md "
           placeholder="type your username"
+          id="username"
         />
         <br />
-        <label htmlFor="" className="text-lg font-sans ml-6">
+        <label htmlFor="password" className="text-lg font-sans ml-6">
           Password
         </label>
         <br />
@@ -34,6 +35,7 @@ const Login = () => {
           type="password"
           className="border-black border-2 w-4/5 p-1 m-2 rounded-md"
           placeholder="type your password"
+          id="password"
         />
         <p className="text-end mr-12 my-2 hover:text-blue-300 cursor-pointer">
           Forgot Password?{" "}
