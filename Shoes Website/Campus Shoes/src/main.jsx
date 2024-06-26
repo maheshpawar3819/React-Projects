@@ -10,6 +10,7 @@ import Womens from "./Components/Womens.jsx";
 import Sandals from "./Components/Sandals.jsx";
 import Kids from "./Components/Kids.jsx";
 import Login from "./Components/Login.jsx";
+import Mensdetail from "./Components/Mens/Mensdetail.jsx";
 
 const approuter = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const approuter = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/mens/menscard/:id",
+        element: <Mensdetail />,
       },
     ],
   },
