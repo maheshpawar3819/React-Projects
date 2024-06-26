@@ -25,9 +25,9 @@ const Mensdetail = () => {
   }, []);
 
   return (
-    <div className="mt-32 w-[90vw] m-auto">
+    <div className="mt-32 w-[90vw] m-auto flex">
       {/* image container */}
-      <div className="w-[50vw] h-[100vh] flex p-2">
+      <div className="w-[55vw] h-[100vh] flex p-2">
         {/* small images */}
         <div className="">
           {data?.images?.map((img, index) => {
@@ -49,6 +49,28 @@ const Mensdetail = () => {
             alt="large image"
             className="h-screen p-3 pl-10"
           />
+        </div>
+      </div>
+      {/* second container  */}
+      <div className="w-[35vw] h-[100vh]">
+        <h1 className="text-2xl">{data?.title}</h1>
+        <p className="text-xl text-red-500">
+          Price Rs : {data?.variants?.[0]?.price}
+        </p>
+        <p className="text-gray-400 text-xs my-1">inclusive of all Taxes</p>
+        <div>
+          <p className="my-2">Size</p>
+          <div className="flex">
+            {data?.options?.[1]?.values?.map((data, index) => {
+              return (
+                <div key={index}>
+                  <button className="p-2 border-2 border-gray-300 m-2 px-5  hover:bg-black hover:text-white">
+                    {data}
+                  </button>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
