@@ -20,7 +20,6 @@ const Login = () => {
         <span>{userloginlogo}</span>
         <input
           type="text"
-          w-72
           className="border-black border-2 w-4/5 p-1 m-2 rounded-md "
           placeholder="type your username"
           id="username"
