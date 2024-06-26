@@ -30,7 +30,7 @@ const Mensdetail = () => {
       <div className="w-[50vw]">
         {/* small images */}
         <div>
-          {data?.images?.slice(0, 4)?.map((img, index) => {
+          {data?.images?.map((img, index) => {
             return (
               <div key={index}>
                 <img src={img?.url} alt="samll images" />
@@ -40,7 +40,7 @@ const Mensdetail = () => {
         </div>
         {/* large image  */}
         <div>
-          <img src={data?.images[0]?.url} alt="" />
+          <img src={data?.images?.[0].url} alt="large image" />
         </div>
       </div>
     </div>
