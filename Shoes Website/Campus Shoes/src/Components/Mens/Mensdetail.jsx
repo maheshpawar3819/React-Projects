@@ -25,22 +25,30 @@ const Mensdetail = () => {
   }, []);
 
   return (
-    <div className="mt-32">
+    <div className="mt-32 w-[90vw] m-auto">
       {/* image container */}
-      <div className="w-[50vw]">
+      <div className="w-[50vw] h-[100vh] flex p-2">
         {/* small images */}
-        <div>
+        <div className="">
           {data?.images?.map((img, index) => {
             return (
               <div key={index}>
-                <img src={img?.url} alt="samll images" />
+                <img
+                  src={img?.url}
+                  alt="samll images"
+                  className="size-52  h-auto p-1"
+                />
               </div>
             );
           })}
         </div>
         {/* large image  */}
-        <div>
-          <img src={data?.images?.[0].url} alt="large image" />
+        <div className="h-screen w-screen">
+          <img
+            src={data?.images?.[0].url}
+            alt="large image"
+            className="h-screen p-3 pl-10"
+          />
         </div>
       </div>
     </div>
