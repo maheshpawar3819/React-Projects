@@ -25,10 +25,29 @@ const Mensdetail = () => {
   }, []);
 
   return (
-    <div className="mt-60">
-      <h1>{data?.title}</h1>
-      <img src={data?.images[0]?.url} alt="" />
-      <img src={data?.images[1]?.url} alt="" />
+    <div className="mt-32">
+      {/* image container */}
+      <div className="w-[50vw]">
+        {/* small images */}
+        <div>
+          <div>
+            <img src="" alt="" />
+          </div>
+          <div>
+            <img src="" alt="" />
+          </div>
+          <div>
+            <img src="" alt="" />
+          </div>
+          <div>
+            <img src="" alt="" />
+          </div>
+        </div>
+        {/* large image  */}
+        <div>
+          <img src="" alt="" />
+        </div>
+      </div>
     </div>
   );
 };
