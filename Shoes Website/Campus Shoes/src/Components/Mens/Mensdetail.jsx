@@ -89,17 +89,25 @@ const Mensdetail = () => {
               >
                 -
               </button>
-              <button className="p-2 border-2 border-gray-300 m-2 px-5  hover:bg-gray-300 hover:text-whit">
+              <button className="p-2 border-2 border-gray-300 m-2 px-5  hover:bg-gray-300 hover:text-white">
                 {number}
               </button>
               <button
-                className="p-2 border-2 border-gray-300 m-2 px-5  hover:bg-gray-300 hover:text-whit"
+                className="p-2 border-2 border-gray-300 m-2 px-5  hover:bg-gray-300 hover:text-white"
                 onClick={() => {
                   setNumber(number + 1);
                 }}
               >
                 +
               </button>
+              <div className="w-full">
+                <button className="w-[45%] border-2 rounded-sm m-2  border-black p-2 text-gray-600 font-bold hover:bg-black hover:text-white">
+                  ADD TO CART
+                </button>
+                <button className="w-[45%] border-2 rounded-sm m-2  border-black p-2 text-gray-600 font-bold hover:bg-black hover:text-white">
+                  BUY IT NOW
+                </button>
+              </div>
             </div>
           </div>
         </div>
