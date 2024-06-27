@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
+import { delivertruck } from "../Utils/icons";
 const Mensdetail = () => {
   const [data, setData] = useState([]);
   const [number, setNumber] = useState(1);
@@ -100,6 +101,14 @@ const Mensdetail = () => {
               >
                 +
               </button>
+              <div>
+                <p className="my-2">
+                  {delivertruck}
+                  Check delivery at your location
+                </p>
+                <input type="text" placeholder="inter your pincode" className="p-2 rounded-md"/>
+                <button className="p-2 border-2 border-black ml-2 rounded-md">Check</button>
+              </div>
               <div className="w-full">
                 <button className="w-[45%] border-2 rounded-sm m-2  border-black p-2 text-gray-600 font-bold hover:bg-black hover:text-white">
                   ADD TO CART
