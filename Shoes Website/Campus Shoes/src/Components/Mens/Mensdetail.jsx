@@ -106,10 +106,23 @@ const Mensdetail = () => {
                   {delivertruck}
                   Check delivery at your location
                 </p>
-                <input type="text" placeholder="inter your pincode" className="p-2 rounded-md"/>
-                <button className="p-2 border-2 border-black ml-2 rounded-md">Check</button>
+                <input
+                  type="text"
+                  placeholder="inter your pincode"
+                  className="p-2 rounded-md"
+                />
+                <button
+                  className="p-2 border-2 border-black ml-2 rounded-md"
+                  onClick={() => {
+                    return alert(
+                      "sorry delivery not available in your location"
+                    );
+                  }}
+                >
+                  Check
+                </button>
               </div>
-              <div className="w-full">
+              <div className="w-full mt-3">
                 <button className="w-[45%] border-2 rounded-sm m-2  border-black p-2 text-gray-600 font-bold hover:bg-black hover:text-white">
                   ADD TO CART
                 </button>
