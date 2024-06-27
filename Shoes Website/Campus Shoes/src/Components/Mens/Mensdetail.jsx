@@ -3,6 +3,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 const Mensdetail = () => {
   const [data, setData] = useState([]);
+  const [number, setNumber] = useState(1);
 
   const fetchapi = () => {
     axios
@@ -58,8 +59,14 @@ const Mensdetail = () => {
           Price Rs : {data?.variants?.[0]?.price}
         </p>
         <p className="text-gray-400 text-xs my-1">inclusive of all Taxes</p>
+        <hr className="my-3"></hr>
         <div>
           <p className="my-2">Size</p>
+          <div>
+            <h1 className="text-xl text-gray-800 my-2">
+              {data?.title}/{data?.options?.[0]?.values?.[0]}
+            </h1>
+          </div>
           <div className="flex">
             {data?.options?.[1]?.values?.map((data, index) => {
               return (
@@ -70,6 +77,30 @@ const Mensdetail = () => {
                 </div>
               );
             })}
+          </div>
+          <div className="my-3">
+            <p>Quantity</p>
+            <div>
+              <button
+                className="p-2 border-2 border-gray-300 m-2 px-5  hover:bg-gray-300 hover:text-white"
+                onClick={() => {
+                  setNumber(number - 1);
+                }}
+              >
+                -
+              </button>
+              <button className="p-2 border-2 border-gray-300 m-2 px-5  hover:bg-gray-300 hover:text-whit">
+                {number}
+              </button>
+              <button
+                className="p-2 border-2 border-gray-300 m-2 px-5  hover:bg-gray-300 hover:text-whit"
+                onClick={() => {
+                  setNumber(number + 1);
+                }}
+              >
+                +
+              </button>
+            </div>
           </div>
         </div>
       </div>
