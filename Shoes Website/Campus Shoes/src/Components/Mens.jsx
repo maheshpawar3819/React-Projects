@@ -3,6 +3,7 @@ import { mensbanner } from "./Utils/images";
 import axios from "axios";
 import Menscard from "./Menscard";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Mens = () => {
   const [data, setData] = useState([]);
@@ -32,11 +33,13 @@ const Mens = () => {
       <div>
         <img src={mensbanner} alt="" />
       </div>
-      <div className="flex flex-wrap justify-center  gap-4 w-full">
-        {data.map((resp, index) => {
-          return <Menscard key={index} data={resp} />;
-        })}
-      </div>
+      <Link key={data.id} to={"/mens/menscard/:id"}>
+        <div className="flex flex-wrap justify-center  gap-4 w-full">
+          {data.map((resp, index) => {
+            return <Menscard key={index} data={resp} />;
+          })}
+        </div>
+      </Link>
     </div>
   );
 };
