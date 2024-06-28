@@ -1,10 +1,11 @@
 import axios from "axios";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import { delivertruck } from "../Utils/icons";
 const Mensdetail = () => {
   const [data, setData] = useState([]);
   const [number, setNumber] = useState(1);
+
 
   const fetchapi = () => {
     axios
