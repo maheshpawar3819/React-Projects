@@ -20,8 +20,10 @@ const Restorentcard = (props) => {
       </p>
       <p>{menu}</p>
       <p>
-        {locations}
+        {/* svg logo */}
         {location}
+        {/* extract from api */}
+        {locations}
       </p>
     </div>
   );
