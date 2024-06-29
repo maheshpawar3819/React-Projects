@@ -2,11 +2,9 @@ import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
 import { delivertruck } from "../Utils/icons";
-import { useParams } from "react-router-dom";
 const Mensdetail = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [number, setNumber] = useState(1);
-  const { id } = useParams();
 
   const fetchapi = () => {
     axios
@@ -14,11 +12,9 @@ const Mensdetail = () => {
         "https://svc-3-usf.hotyon.com/search?q=&apiKey=01c29538-1ba1-44af-b8d2-270a5cfc7fc0&country=IN&locale=en&getProductDescription=0&collection=375646355687&skip=0&take=24&sort=-date"
       )
       .then((response) => {
-        console.log(response?.data?.data?.items[0]?.images[0]?.url);
-        const products = response?.data?.data?.items.find((item) => {
-          return item.id === id;
-        });
-        setData(products);
+        console.log(response);
+        console.log(response?.data?.data?.items[0].id);
+        setData(response?.data?.data?.items[0]);
       })
       .catch((error) => {
         console.log("oops someting wants rong");
@@ -27,7 +23,7 @@ const Mensdetail = () => {
 
   useEffect(() => {
     fetchapi();
-  }, [id]);
+  }, []);
 
   return (
     <div className="mt-32 w-[90vw] m-auto flex">
