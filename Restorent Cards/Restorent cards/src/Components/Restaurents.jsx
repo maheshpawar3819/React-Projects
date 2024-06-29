@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import axios, { all } from "axios";
+import axios from "axios";
 import Cards from "./Cards/Cards";
 const Restaurents = () => {
   const [restaurentlist, setrestaurentlist] = useState([]);
