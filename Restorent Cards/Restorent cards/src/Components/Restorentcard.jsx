@@ -20,10 +20,11 @@ const Restorentcard = (props) => {
       </p>
       <p>{menu}</p>
       <p>
-        {/* svg logo */}
-        {location}
         {/* extract from api */}
         {locations}
+
+        {/* svg logo */}
+        {location}
       </p>
     </div>
   );
