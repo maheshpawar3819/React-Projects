@@ -42,7 +42,7 @@ const approuter = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/mens/menscard/:id",
+        path: "/menscard/:id",
         element: <Mensdetail />,
       },
     ],

@@ -33,7 +33,7 @@ const Mens = () => {
       <div>
         <img src={mensbanner} alt="" />
       </div>
-      <Link key={data.id} to={"/mens/menscard/:id"}>
+      <Link key={data.id} to={"/menscard/:id"}>
         <div className="flex flex-wrap justify-center  gap-4 w-full">
           {data.map((resp, index) => {
             return <Menscard key={index} data={resp} />;
