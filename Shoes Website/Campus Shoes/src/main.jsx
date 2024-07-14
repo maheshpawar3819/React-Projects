@@ -11,11 +11,16 @@ import Sandals from "./Components/Sandals.jsx";
 import Kids from "./Components/Kids.jsx";
 import Login from "./Components/Login.jsx";
 import Mensdetail from "./Components/Mens/Mensdetail.jsx";
-
+import { Provider } from "react-redux";
+import appstore from "./Components/Utils/appstore.js";
 const approuter = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <Provider store={appstore}>
+        <App />
+      </Provider>
+    ),
     children: [
       {
         path: "/",
