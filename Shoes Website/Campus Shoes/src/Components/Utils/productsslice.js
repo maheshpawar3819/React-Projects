@@ -1,16 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const products = createSlice({
-  name: "shoes",
-  initialState: {
-    newarrivals: [],
+const newarraivals=createSlice({
+  name:"newarrivals",
+  initialState:{
+    newArrivals:[],
   },
-  reducers: {
-    addnewarrivals: (state, action) => {
-      state.newarrivals = action.payload;
-    },
-  },
-});
+  reducers:{
+    addNewarrivals:(state,action) => {
+      state.newArrivals=action.payload;
+    }
+  }
+})
 
-export const { addnewarrivals } = products.actions;
-export default products.reducer;
+export const {addNewarrivals}=newarraivals.actions;
+export default newarraivals.reducer;

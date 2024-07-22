@@ -6,6 +6,7 @@ import {
   twitterlogo,
   googlelogo,
 } from "./Utils/icons";
+
 const Login = () => {
   return (
     <div className="box-border mt-32 h-full">
