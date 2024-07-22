@@ -1,6 +1,6 @@
 import React from "react";
 import { cart, logo } from "./Utils/icons";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Search from "./Search";
 const Header = () => {
   return (
@@ -28,19 +28,44 @@ const Header = () => {
       <div className="pb-2">
         <ul className="flex justify-evenly tracking-widest text-gray-700 text-xl  pt-3">
           <li className="cursor-pointer hover:text-orange-700">
-            <Link to={"/"}>New Arrivals</Link>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) => (isActive ? "text-orange-700" : "")}
+            >
+              New Arrivals
+            </NavLink>
           </li>
           <li className="cursor-pointer hover:text-orange-700">
-            <Link to={"/mens"}>Mens</Link>
+            <NavLink
+              to={"/mens"}
+              className={({ isActive }) => (isActive ? "text-orange-700 " : "")}
+            >
+              Mens
+            </NavLink>
           </li>
           <li className="cursor-pointer hover:text-orange-700">
-            <Link to={"/womens"}>Womens</Link>
+            <NavLink
+              to={"/womens"}
+              className={({ isActive }) => (isActive ? "text-orange-700" : "")}
+            >
+              Womens
+            </NavLink>
           </li>
           <li className="cursor-pointer hover:text-orange-700">
-            <Link to={"/kids"}>Kids</Link>
+            <NavLink
+              to={"/kids"}
+              className={({ isActive }) => (isActive ? "text-orange-700" : "")}
+            >
+              Kids
+            </NavLink>
           </li>
           <li className="cursor-pointer hover:text-orange-700">
-            <Link to={"/sandals"}>Sandels</Link>
+            <NavLink
+              to={"/sandals"}
+              className={({ isActive }) => (isActive ? "text-orange-700" : "")}
+            >
+              Sandals
+            </NavLink>
           </li>
         </ul>
       </div>
