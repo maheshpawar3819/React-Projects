@@ -1,28 +1,12 @@
-import React, { useEffect, useState } from "react";
 import { kidsbanner } from "./Utils/images";
-import axios from "axios";
 import Kidscard from "./Kidscard";
 import Shimmer from "./Shimmer";
+import { useSelector } from "react-redux";
+import useKids from "./Hooks/useKids";
 const Kids = () => {
-  const [data, setData] = useState([]);
+  const data = useSelector((store) => store.products.newKidsshoes);
 
-  const fetchapi = () => {
-    axios
-      .get(
-        "https://svc-3-usf.hotyon.com/search?q=&apiKey=01c29538-1ba1-44af-b8d2-270a5cfc7fc0&country=IN&locale=en&getProductDescription=0&collection=375646617831&skip=0&take=24&sort=bestselling"
-      )
-      .then((response) => {
-        // console.log(resp);
-        setData(response?.data?.data?.items || []);
-      })
-      .catch(() => {
-        console.log("error was found");
-      });
-  };
-
-  useEffect(() => {
-    fetchapi();
-  }, []);
+  useKids();
 
   return data.length === 0 ? (
     <Shimmer />

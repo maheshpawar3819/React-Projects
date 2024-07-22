@@ -1,4 +1,3 @@
-
 import { banner } from "./Utils/icons";
 import Exclusive from "./Exclusive";
 import Shimmer from "./Shimmer";

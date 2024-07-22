@@ -1,30 +1,14 @@
-import React, { useEffect, useState } from "react";
 import { mensbanner } from "./Utils/images";
-import axios from "axios";
 import Menscard from "./Menscard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import useMens from "./Hooks/useMens";
 
 const Mens = () => {
-  const [data, setData] = useState([]);
+  const data = useSelector((store) => store.products.newMens);
 
-  const fetchapi = () => {
-    axios
-      .get(
-        "https://svc-3-usf.hotyon.com/search?q=&apiKey=01c29538-1ba1-44af-b8d2-270a5cfc7fc0&country=IN&locale=en&getProductDescription=0&collection=375646355687&skip=0&take=24&sort=-date"
-      )
-      .then((response) => {
-        console.log(response?.data?.data?.items || []);
-        setData(response?.data?.data?.items || []);
-      })
-      .catch(() => {
-        console.log("Opps something wents wrong");
-      });
-  };
-
-  useEffect(() => {
-    fetchapi();
-  }, []);
+  useMens();
 
   return data.length === 0 ? (
     <Shimmer />
