@@ -14,6 +14,7 @@ import Mensdetail from "./Components/Mens/Mensdetail.jsx";
 import { Provider } from "react-redux";
 import appstore from "./Components/Utils/appstore.js";
 import Signin from "./Components/Signin.jsx";
+import Cart from "./Components/Cart.jsx";
 const approuter = createBrowserRouter([
   {
     path: "/",
@@ -54,6 +55,10 @@ const approuter = createBrowserRouter([
       {
         path: "/menscard/:id",
         element: <Mensdetail />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },
