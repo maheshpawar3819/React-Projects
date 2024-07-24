@@ -21,7 +21,7 @@ const Header = () => {
             <Link to={"/login"}>Login</Link>
           </button>
           <button className="bg-slate-500 ml-5 p-1 rounded-md px-3 tracking-wider text-white drop-shadow-xl hover:bg-slate-800 ">
-            Sign in
+            <Link to={"/Signin"}>Sign in</Link>
           </button>
         </div>
       </div>

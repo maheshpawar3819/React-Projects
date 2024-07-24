@@ -13,6 +13,7 @@ import Login from "./Components/Login.jsx";
 import Mensdetail from "./Components/Mens/Mensdetail.jsx";
 import { Provider } from "react-redux";
 import appstore from "./Components/Utils/appstore.js";
+import Signin from "./Components/Signin.jsx";
 const approuter = createBrowserRouter([
   {
     path: "/",
@@ -45,6 +46,10 @@ const approuter = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/signin",
+        element: <Signin />,
       },
       {
         path: "/menscard/:id",
