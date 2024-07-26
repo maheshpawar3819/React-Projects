@@ -1,12 +1,19 @@
-import React from 'react'
+import React from "react";
+import { useSelector } from "react-redux";
+import Cartcard from "./Cartcard";
 
 const Cart = () => {
-  
-  return (
-    <div className='mt-24'>
-      hii i am cart
-    </div>
-  )
-}
+  const showdata = useSelector((store) => store.cart.addcart);
 
-export default Cart
+  console.log(showdata);
+
+  return (
+    <div className="mt-24 m-auto w-[90vw] ">
+      {showdata.map((data, index) => {
+        return <Cartcard key={index} info={data} />;
+      })}
+    </div>
+  );
+};
+
+export default Cart;

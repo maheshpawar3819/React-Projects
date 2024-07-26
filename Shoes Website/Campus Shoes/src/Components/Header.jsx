@@ -20,7 +20,7 @@ const Header = () => {
           <div className="self-center p-1 ml-5 hover:text-orange-700 cursor-pointer">
             <Link to="/cart" className="flex">
               {cart}
-              <p className="text-red-500">{cartData.length}</p>
+              <p className="text-red-500 font-bold font-mono">{cartData.length}</p>
             </Link>
           </div>
           <button className="bg-slate-500 ml-4 p-1 rounded-md px-3 tracking-wider text-white drop-shadow-xl hover:bg-slate-800 ">
