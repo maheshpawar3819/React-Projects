@@ -5,7 +5,7 @@ import {
   facebooklogo,
   twitterlogo,
   googlelogo,
-  confirmpass
+  confirmpass,
 } from "./Utils/icons";
 
 const Signin = () => {
@@ -13,7 +13,7 @@ const Signin = () => {
     <div className="box-border mt-32 h-full">
       <div className="border-gray-300 border-2 h-auto w-96  p-3 m-auto mt-36 mb-5 rounded-lg shadow-xl">
         <p className="text-center text-3xl font-sans m-4 tracking-widest">
-          Sign in 
+          Sign in
         </p>
         <label htmlFor="username" className="text-lg font-sans ml-6">
           User Name
@@ -48,7 +48,7 @@ const Signin = () => {
           type="password"
           className="border-black border-2 w-4/5 p-1 m-2 rounded-md"
           placeholder="type your password"
-          id="password"
+          id="confirmpassword"
         />
 
         <div className="flex justify-center m-3">

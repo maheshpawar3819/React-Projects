@@ -2,7 +2,10 @@ import React from "react";
 import { cart, logo } from "./Utils/icons";
 import { NavLink, Link } from "react-router-dom";
 import Search from "./Search";
+import { useSelector } from "react-redux";
 const Header = () => {
+  const cartData = useSelector((store) => store.cart.addcart);
+
   return (
     <div className="fixed w-full top-0 bg-white z-10">
       <div className="flex justify-between border-b-2 p-2 px-2 ">
@@ -15,7 +18,10 @@ const Header = () => {
 
         <div className="p-1 flex">
           <div className="self-center p-1 ml-5 hover:text-orange-700 cursor-pointer">
-            <Link to="/cart">{cart}</Link>
+            <Link to="/cart" className="flex">
+              {cart}
+              <p className="text-red-500">{cartData.length}</p>
+            </Link>
           </div>
           <button className="bg-slate-500 ml-4 p-1 rounded-md px-3 tracking-wider text-white drop-shadow-xl hover:bg-slate-800 ">
             <Link to={"/login"}>Login</Link>

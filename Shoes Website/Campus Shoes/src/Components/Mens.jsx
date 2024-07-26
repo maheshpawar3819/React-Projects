@@ -8,6 +8,7 @@ import useMens from "./Hooks/useMens";
 const Mens = () => {
   const data = useSelector((store) => store.products.newMens);
 
+
   useMens();
 
   return data.length === 0 ? (

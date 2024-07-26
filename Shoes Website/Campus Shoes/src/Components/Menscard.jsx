@@ -1,14 +1,9 @@
 import React from "react";
-import { useDispatch } from "react-redux";
 const Menscard = ({ data }) => {
   const { title, images, variants, options } = data || {};
   const img = images[0]?.url;
   const price = variants[0]?.price;
   const option = options[1]?.values;
-
-  // const addproduct=() => {
-
-  // }
 
   return (
     <div className=" cursor-pointer hover:border-gray-200 hover:border-2 rounded-md h-auto w-72 p-1">
