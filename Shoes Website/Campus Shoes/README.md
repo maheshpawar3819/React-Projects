@@ -1,8 +1,9 @@
-# React + Vite
+# Campus Shoes Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features -
+1.Using Tailwind Css For Styling
+2.Dynamic Routing
+3.Add To Cart Feature
+4.Create Custom Hooks For Fetch Api
+5.Light Weight Components
+6.Provide Redux Store For State Management
