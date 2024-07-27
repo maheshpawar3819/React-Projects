@@ -3,12 +3,11 @@ import { useDispatch } from "react-redux";
 import { addtocart } from "./Utils/cartslice";
 
 const Womenscard = ({ data }) => {
+  const dispatch = useDispatch();
   const { title, images, variants, options } = data || {};
   const img = images[0]?.url;
   const price = variants[0]?.price;
   const option = options[1]?.values;
-
-  const dispatch = useDispatch();
 
   const addproduct = () => {
     dispatch(addtocart(data));

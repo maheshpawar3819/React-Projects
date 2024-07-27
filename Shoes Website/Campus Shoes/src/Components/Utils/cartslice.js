@@ -12,11 +12,8 @@ const addcart = createSlice({
     removetocart: (state, action) => {
       state.addcart.pop(action.payload);
     },
-    clearcart: (state, action) => {
-      state.addcart.length = 0;
-    },
   },
 });
 
-export const { addtocart } = addcart.actions;
+export const { addtocart, removetocart } = addcart.actions;
 export default addcart.reducer;
