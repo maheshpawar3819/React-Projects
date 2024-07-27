@@ -6,7 +6,6 @@ import useMens from "./Hooks/useMens";
 
 const Mens = () => {
   const data = useSelector((store) => store.products.newMens);
-
   useMens();
 
   return data.length === 0 ? (
@@ -18,7 +17,7 @@ const Mens = () => {
       </div>
       <div className="flex flex-wrap justify-center  gap-4 w-full">
         {data.map((resp) => {
-          return <Menscard key={data?.id} data={resp} />;
+          return <Menscard key={resp.id} data={resp} />;
         })}
       </div>
     </div>

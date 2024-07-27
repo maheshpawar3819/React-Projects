@@ -8,7 +8,6 @@ const Kidscard = ({ data }) => {
   const img = images[0]?.url;
   const price = variants[0]?.price;
   const option = options[1]?.values;
-
   const addproduct = () => {
     dispatch(addtocart(data));
   };

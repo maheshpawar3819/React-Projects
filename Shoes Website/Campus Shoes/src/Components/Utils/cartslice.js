@@ -10,7 +10,7 @@ const addcart = createSlice({
       state.addcart.push(action.payload);
     },
     removetocart: (state, action) => {
-      state.addcart.pop(action.payload);
+      state.addcart.shift(action.payload);
     },
   },
 });

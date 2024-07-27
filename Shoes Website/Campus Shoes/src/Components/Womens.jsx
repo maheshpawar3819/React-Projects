@@ -4,8 +4,8 @@ import Shimmer from "./Shimmer";
 import useWomensshoes from "./Hooks/useWomensshoes";
 import { useSelector } from "react-redux";
 const Womens = () => {
-  useWomensshoes();
   const data = useSelector((store) => store.products.newWomensshoes);
+  useWomensshoes();
 
   return data.length === 0 ? (
     <Shimmer />

@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addtocart } from "./Utils/cartslice";
-import { data } from "autoprefixer";
 
 const Exclusive = ({ data }) => {
   const dispatch = useDispatch();

@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 import useSandels from "./Hooks/useSandels";
 const Sandals = () => {
   const data = useSelector((store) => store.products.newSandels);
-
   useSandels();
 
   return data.length === 0 ? (

@@ -23,7 +23,7 @@ const Womenscard = ({ data }) => {
           className="text-white hover:text-black hover:border-solid hover:border-2 hover:border-gray-200 hover:bg-white p-2 px-16 tracking-widest rounded-sm text-xl"
           onClick={addproduct}
         >
-          Add To Cart 
+          Add To Cart
         </button>
       </div>
       <div>
