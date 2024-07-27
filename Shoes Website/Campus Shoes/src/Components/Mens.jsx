@@ -1,13 +1,11 @@
 import { mensbanner } from "./Utils/images";
 import Menscard from "./Menscard";
 import Shimmer from "./Shimmer";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import useMens from "./Hooks/useMens";
 
 const Mens = () => {
   const data = useSelector((store) => store.products.newMens);
-
 
   useMens();
 
@@ -18,13 +16,11 @@ const Mens = () => {
       <div>
         <img src={mensbanner} alt="" />
       </div>
-      <Link key={data.id} to={"/menscard/:id"}>
-        <div className="flex flex-wrap justify-center  gap-4 w-full">
-          {data.map((resp, index) => {
-            return <Menscard key={index} data={resp} />;
-          })}
-        </div>
-      </Link>
+      <div className="flex flex-wrap justify-center  gap-4 w-full">
+        {data.map((resp) => {
+          return <Menscard key={data?.id} data={resp} />;
+        })}
+      </div>
     </div>
   );
 };

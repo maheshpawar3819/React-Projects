@@ -1,8 +1,5 @@
-import React, { useState } from "react";
 import Sandalscard from "./Sandalscard";
 import { sandalsbanner } from "./Utils/images";
-import { useEffect } from "react";
-import axios from "axios";
 import Shimmer from "./Shimmer";
 import { useSelector } from "react-redux";
 import useSandels from "./Hooks/useSandels";

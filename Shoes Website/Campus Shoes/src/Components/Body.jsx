@@ -18,7 +18,7 @@ const Body = () => {
       </div>
       <div className="flex flex-wrap justify-center  gap-4 w-full">
         {data.map((data, index) => {
-          return <Exclusive key={index} exclusive={data} />;
+          return <Exclusive key={index} data={data} />;
         })}
       </div>
     </div>

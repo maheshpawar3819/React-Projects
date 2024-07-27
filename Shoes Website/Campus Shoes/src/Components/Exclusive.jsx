@@ -1,9 +1,18 @@
 import React from "react";
-const Exclusive = ({ exclusive }) => {
-  const { title, images, variants, options } = exclusive || {};
+import { useDispatch } from "react-redux";
+import { addtocart } from "./Utils/cartslice";
+import { data } from "autoprefixer";
+
+const Exclusive = ({ data }) => {
+  const dispatch = useDispatch();
+  const { title, images, variants, options } = data || {};
   const img = images[0]?.url;
   const price = variants[0]?.price;
   const option = options[1]?.values;
+
+  const addproduct = () => {
+    dispatch(addtocart(data));
+  };
 
   return (
     <div className=" cursor-pointer hover:border-gray-200 hover:border-2 rounded-md h-auto w-72 p-1">
@@ -11,7 +20,10 @@ const Exclusive = ({ exclusive }) => {
         <img src={img} alt="" className="size-80" />
       </div>
       <div className="flex justify-center my-2 w-[100%] h-11">
-        <button className="text-white hover:text-black hover:border-solid hover:border-2 hover:border-gray-200 hover:bg-white p-2 px-16 tracking-widest rounded-sm text-xl">
+        <button
+          className="text-white hover:text-black hover:border-solid hover:border-2 hover:border-gray-200 hover:bg-white p-2 px-16 tracking-widest rounded-sm text-xl"
+          onClick={addproduct}
+        >
           Add To Cart
         </button>
       </div>
