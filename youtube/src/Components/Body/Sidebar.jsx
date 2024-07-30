@@ -13,8 +13,13 @@ import {
   flims_logo,
   gaming_logo,
 } from "../../Utils/logos";
+import { useSelector } from "react-redux";
 
 const Sidebar = () => {
+  const togglefeature = useSelector((store) => store.app.isMenuopen);
+
+  if (!togglefeature) return null;
+
   return (
     <div className="w-56 py-5 pl-2 shadow-xl">
       <div>

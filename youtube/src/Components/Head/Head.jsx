@@ -1,10 +1,17 @@
 import React from "react";
 import { youtubelogo, menusvg, user } from "../../Utils/logos";
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../../Utils/Store/appSlice";
 const Head = () => {
+  const dispatch=useDispatch();
+
+  const istoggle=() => {
+    dispatch(toggleMenu())
+  }
   return (
     <div className="flex justify-between  w-full p-3  px-5 shadow-md">
       <div className="flex gap-6 align-middle">
-        <div className="cursor-pointer self-center">{menusvg}</div>
+        <button onClick={() => istoggle()}>{menusvg}</button>
         <div className="w-28 self-center">{youtubelogo}</div>
       </div>
       <div className="w-96 -ml-56">
