@@ -36,7 +36,6 @@ export const user =
 export const home_logo = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    enable-background="new 0 0 24 24"
     height="24"
     viewBox="0 0 24 24"
     width="24"
@@ -67,7 +66,6 @@ export const short_log = (
 export const sub_logo = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    enable-background="new 0 0 24 24"
     height="24"
     viewBox="0 0 24 24"
     width="24"
@@ -130,7 +128,6 @@ export const watchletter_logo = (
 export const Liked_log = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    enable-background="new 0 0 24 24"
     height="24"
     viewBox="0 0 24 24"
     width="24"
@@ -146,7 +143,6 @@ export const Liked_log = (
 export const trending_logo = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    enable-background="new 0 0 24 24"
     height="24"
     viewBox="0 0 24 24"
     width="24"
@@ -175,7 +171,6 @@ export const shopping_logo = (
 export const music_logo = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    enable-background="new 0 0 24 24"
     height="24"
     viewBox="0 0 24 24"
     width="24"
@@ -204,7 +199,6 @@ export const flims_logo = (
 export const gaming_logo = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    enable-background="new 0 0 24 24"
     height="24"
     viewBox="0 0 24 24"
     width="24"
