@@ -1,9 +1,9 @@
 import React from "react";
-
+import Buttons from "./Buttons";
 const Buttonlist = () => {
   let databtn = [
     "All",
-    "JavaScrip",
+    "JavaScript",
     "Music",
     "Live",
     "T-series",
@@ -14,13 +14,19 @@ const Buttonlist = () => {
     "Js intervews",
     "watched",
     "to you",
+    "Html",
+    "Tailwind css",
   ];
 
   const mp = databtn.map((ele) => ele);
   console.log(mp);
   return (
-    <div>
-      <></>
+    <div className="flex m-2">
+      <>
+        {databtn.map((ele, index) => {
+          return <Buttons key={index} data={ele} />;
+        })}
+      </>
     </div>
   );
 };

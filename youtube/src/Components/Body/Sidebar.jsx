@@ -29,7 +29,7 @@ const Sidebar = () => {
           <li className="py-1 cursor-pointer">{sub_logo} Subscripters</li>
           <hr />
         </ul>
-        <h1 className="text-lg font-bold">You {">"}</h1>
+        <h1 className="text-lg font-bold my-3">You {">"}</h1>
         <ul className="pl-8">
           <li className="py-1 font-semibold cursor-pointer">
             {history_logo} History
@@ -43,7 +43,7 @@ const Sidebar = () => {
           <li className="py-1 font-semibold">{Liked_log} Liked Videos</li>
           <hr />
         </ul>
-        <h1 className="text-lg font-bold">Expolore</h1>
+        <h1 className="text-lg font-bold my-3">Expolore</h1>
         <ul className="pl-8">
           <li className="py-1 font-semibold cursor-pointer">
             {trending_logo} Trending
