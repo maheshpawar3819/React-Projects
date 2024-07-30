@@ -18,8 +18,6 @@ const Buttonlist = () => {
     "Tailwind css",
   ];
 
-  const mp = databtn.map((ele) => ele);
-  console.log(mp);
   return (
     <div className="flex m-2">
       <>
