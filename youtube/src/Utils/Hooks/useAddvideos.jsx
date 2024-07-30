@@ -1,7 +1,10 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { youtubeApi_key } from "../constants";
+import { useDispatch } from "react-redux";
+import { addVideos } from "../Store/videosSlice";
 const useAddvideos = () => {
+  const dispatch = useDispatch();
   const fetchdata = () => {
     axios
       .get(
@@ -10,6 +13,7 @@ const useAddvideos = () => {
       )
       .then((response) => {
         console.log(response);
+        dispatch(addVideos(response?.data?.items || []));
       })
       .catch((error) => {
         console.log(error, "something wrong");
