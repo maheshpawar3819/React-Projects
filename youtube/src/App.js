@@ -4,7 +4,7 @@ import "./index.css"
 
 
 function App() {
-  return <div className="flex">
+  return <div className="">
     <Head/>
     <Body/>
   </div>;

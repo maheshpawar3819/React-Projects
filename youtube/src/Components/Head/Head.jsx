@@ -13,7 +13,7 @@ const Head = () => {
           className="self-center  border-2 p-[3px] w-80 rounded-l-full pl-5"
           placeholder="Search.."
         />
-        <button className="self-center rounded-r-full hover:text-white hover:bg-slate-400 p-1 bg-gray-200 border">
+        <button className="self-center rounded-r-full hover:text-white hover:bg-slate-400  p-1 bg-gray-200 border">
           Search
         </button>
       </div>
