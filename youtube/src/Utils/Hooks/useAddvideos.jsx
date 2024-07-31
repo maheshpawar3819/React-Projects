@@ -8,7 +8,7 @@ const useAddvideos = () => {
   const fetchdata = () => {
     axios
       .get(
-        "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=" +
+        "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&&maxResults=50&regionCode=IN&key=" +
           youtubeApi_key
       )
       .then((response) => {
@@ -17,7 +17,7 @@ const useAddvideos = () => {
       })
       .catch((error) => {
         console.log(error, "something wrong");
-      });
+      }); 
   };
 
   useEffect(() => {

@@ -6,20 +6,20 @@ const Buttonlist = () => {
     "JavaScript",
     "Music",
     "Live",
-    "T-series",
+    "Marathi",
     "Gaming",
     "Java",
     "Ai",
     "Test",
-    "Js intervews",
+    "intervews",
     "watched",
-    "to you",
+    "jukebox",
     "Html",
-    "Tailwind css",
+    "Tailwindcss",
   ];
 
   return (
-    <div className="flex m-2">
+    <div className="flex m-2 ">
       <>
         {databtn.map((ele, index) => {
           return <Buttons key={index} data={ele} />;

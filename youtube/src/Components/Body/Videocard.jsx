@@ -27,14 +27,16 @@ const Videocard = ({ vdata }) => {
   };
 
   return (
-    <div>
-      <img src={thumbnails?.medium?.url} alt="Tnumbnails" />
-      <ul>
-        <li>{title}</li>
-        <li>{channelTitle}</li>
-        <li>{formatViewcount(statistics.viewCount)}</li>
-        <li>{daysago} days ago</li>
-      </ul>
+    <div className="w-72 shadow-lg rounded-md mr-4 cursor-pointer my-2 p-2 hover:bg-gray-100 ">
+      <img src={thumbnails?.medium?.url} className="rounded-md" alt="Tnumbnails" />
+      <div>
+        <p className="font-bold text-gray-700">{title}</p>
+        <p className="font-semibold text-gray-500">{channelTitle}</p>
+        <div className="flex">
+        <p className="mr-5 font-semibold text-gray-500">{formatViewcount(statistics.viewCount)}</p>
+        <p className="font-semibold text-gray-500">{daysago} days ago</p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -21,7 +21,7 @@ const Sidebar = () => {
   if (!togglefeature) return null;
 
   return (
-    <div className="w-56 py-5 pl-2 shadow-xl">
+    <div className="w-72 py-5 pl-2 shadow-xl  mt-2 ">
       <div>
         <ul className="font-semibold pl-8">
           <li className="py-1 cursor-pointer">{home_logo} Home</li>
