@@ -17,7 +17,7 @@ const useAddvideos = () => {
       })
       .catch((error) => {
         console.log(error, "something wrong");
-      }); 
+      });
   };
 
   useEffect(() => {

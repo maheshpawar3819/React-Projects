@@ -18,6 +18,7 @@ import {
   sendfeedback,
 } from "../../Utils/logos";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const togglefeature = useSelector((store) => store.app.isMenuopen);
@@ -28,7 +29,9 @@ const Sidebar = () => {
     <div className="w-72 py-2 pl-2 shadow-xl  mt-1 h-auto ">
       <div>
         <ul className="font-semibold pl-8">
-          <li className="py-1 cursor-pointer">{home_logo} Home</li>
+          <Link to={"/"}>
+            <li className="py-1 cursor-pointer">{home_logo} Home</li>
+          </Link>
           <li className="py-1 cursor-pointer">{short_log} Shorts</li>
           <li className="py-1 cursor-pointer">{sub_logo} Subscripters</li>
         </ul>
@@ -85,3 +88,5 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+
