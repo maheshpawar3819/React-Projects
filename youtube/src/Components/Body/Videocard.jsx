@@ -27,7 +27,7 @@ const Videocard = ({ vdata }) => {
   };
 
   return (
-    <div className="w-72 shadow-lg rounded-md mr-4 cursor-pointer my-2 p-2 hover:bg-gray-100 ">
+    <div className="w-72 shadow-lg rounded-md mr-4 cursor-pointer my-2 p-2 hover:bg-gray-200 ">
       <img src={thumbnails?.medium?.url} className="rounded-md" alt="Tnumbnails" />
       <div>
         <p className="font-bold text-gray-700">{title}</p>
