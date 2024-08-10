@@ -6,6 +6,7 @@ import axios from "axios";
 
 const Head = () => {
   const [searchQuery, setsearchQuery] = useState("");
+  const [suggestion, setSuggestions] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -29,7 +30,8 @@ const Head = () => {
           searchQuery
       )
       .then((response) => {
-        console.log(response?.data[1]);
+        // console.log(response?.data[1]);
+        setSuggestions(response?.data[1]);
       })
       .catch((error) => {
         console.log(error, "someting wrong");
@@ -58,21 +60,17 @@ const Head = () => {
         </button>
         <div className="fixed bg-white py-2  w-[20rem] rounded-md shadow-2xl">
           <ul>
-            <li className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md">
-              {searchlogo}hii
-            </li>
-            <li className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md">
-              {searchlogo}mahi
-            </li>
-            <li className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md">
-              {searchlogo}how{" "}
-            </li>
-            <li className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md">
-              {searchlogo}are{" "}
-            </li>
-            <li className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md">
-              {searchlogo}youtubelogo
-            </li>
+            {suggestion.map((data) => {
+              return (
+                <li
+                  key={data}
+                  className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md"
+                >
+                  {searchlogo}
+                  {data}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
