@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { youtubelogo, menusvg, user } from "../../Utils/logos";
+import { youtubelogo, menusvg, user, searchlogo } from "../../Utils/logos";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../../Utils/Store/appSlice";
 import axios from "axios";
@@ -56,6 +56,25 @@ const Head = () => {
         <button className="self-center rounded-r-full hover:text-white hover:bg-slate-400  p-1 bg-gray-200 border">
           Search
         </button>
+        <div className="fixed bg-white py-2  w-[20rem] rounded-md shadow-2xl">
+          <ul>
+            <li className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md">
+              {searchlogo}hii
+            </li>
+            <li className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md">
+              {searchlogo}mahi
+            </li>
+            <li className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md">
+              {searchlogo}how{" "}
+            </li>
+            <li className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md">
+              {searchlogo}are{" "}
+            </li>
+            <li className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md">
+              {searchlogo}youtubelogo
+            </li>
+          </ul>
+        </div>
       </div>
       <div>
         <img className="rounded-full size-10 " src={user} alt="" />

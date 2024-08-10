@@ -270,3 +270,23 @@ export const sendfeedback = (
     <path d="M13 14h-2v-2h2v2zm0-9h-2v6h2V5zm6-2H5v16.59l3.29-3.29.3-.3H19V3m1-1v15H9l-5 5V2h16z"></path>
   </svg>
 );
+
+export const searchlogo = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    height="24"
+    viewBox="0 0 24 24"
+    width="24"
+    focusable="false"
+    // style="pointer-events: none; display: inherit; width: 100%; height: 100%;"
+    aria-hidden="true"
+    className="inline-block size-5 ml-2 mr-2"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909zM18 11a7 7 0 00-14 0 7 7 0 1014 0z"
+      fill-rule="evenodd"
+    ></path>
+  </svg>
+);
