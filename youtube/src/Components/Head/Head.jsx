@@ -1,21 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { youtubelogo, menusvg, user, searchlogo } from "../../Utils/logos";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../../Utils/Store/appSlice";
 import axios from "axios";
+import { casheResults } from "../../Utils/Store/searchSlice";
 
 const Head = () => {
   const [searchQuery, setsearchQuery] = useState("");
   const [suggestion, setSuggestions] = useState([]);
+  const [showSuggestions, setshowSuggestions] = useState(false);
   const dispatch = useDispatch();
+
+  const searchCache = useSelector((store) => store.search);
 
   useEffect(() => {
     //make api call after every press
     //but if the diffrence between 2 api call is <200ms
     //decline the api call.
-
     const timer = setTimeout(() => {
-      fetchsearchdata();
+      if (searchCache[searchQuery]) {
+        setSuggestions(searchCache[searchQuery]);
+      } else {
+        fetchsearchdata();
+      }
     }, 200);
 
     return () => {
@@ -32,6 +39,13 @@ const Head = () => {
       .then((response) => {
         // console.log(response?.data[1]);
         setSuggestions(response?.data[1]);
+
+        // update cache
+        dispatch(
+          casheResults({
+            [searchQuery]: response?.data[1],
+          })
+        );
       })
       .catch((error) => {
         console.log(error, "someting wrong");
@@ -54,25 +68,29 @@ const Head = () => {
           placeholder="Search.."
           value={searchQuery}
           onChange={(e) => setsearchQuery(e.target.value)}
+          onFocus={(e) => setshowSuggestions(true)}
+          onBlur={(e) => setshowSuggestions(false)}
         />
         <button className="self-center rounded-r-full hover:text-white hover:bg-slate-400  p-1 bg-gray-200 border">
           Search
         </button>
-        <div className="fixed bg-white py-2  w-[20rem] rounded-md shadow-2xl">
-          <ul>
-            {suggestion.map((data) => {
-              return (
-                <li
-                  key={data}
-                  className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md"
-                >
-                  {searchlogo}
-                  {data}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        {showSuggestions && (
+          <div className="fixed bg-white py-2  w-[20rem] rounded-md shadow-2xl">
+            <ul>
+              {suggestion.map((data) => {
+                return (
+                  <li
+                    key={data}
+                    className="shadow-sm py-1 tracking-wider cursor-pointer hover:bg-gray-100 rounded-md"
+                  >
+                    {searchlogo}
+                    {data}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
       </div>
       <div>
         <img className="rounded-full size-10 " src={user} alt="" />
