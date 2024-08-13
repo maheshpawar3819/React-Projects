@@ -9,6 +9,7 @@ import {
   downloadlogo,
   savelogo,
 } from "../../../Utils/logos";
+import Commentscontainer from "./Commentscontainer";
 
 const Subscribe = () => {
   const channeldata = useSelector((store) => store.video.videos);
@@ -23,6 +24,8 @@ const Subscribe = () => {
   const channel = channeldata.find((ch) => ch.id === channelId);
   const { title } = channel?.snippet?.localized || "title is not availabe";
   const { channelTitle } = channel?.snippet;
+  const {commentCount}=channel?.statistics;
+  // console.log(commentCount)
 
   return (
     <>
@@ -52,6 +55,7 @@ const Subscribe = () => {
           </button>
         </div>
       </div>
+      <Commentscontainer countcomment={commentCount}/>
     </>
   );
 };

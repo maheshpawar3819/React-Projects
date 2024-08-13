@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { toshideMenu } from "../../../Utils/Store/appSlice";
 import { useSearchParams } from "react-router-dom";
-import Commentscontainer from "../comments/Commentscontainer";
+import Subscribe from "../comments/Subscribe";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -24,9 +24,8 @@ const WatchPage = () => {
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
-        
       </div>
-      <Commentscontainer />
+      <Subscribe/>
     </div>
   );
 };
