@@ -2,7 +2,7 @@ import React from "react";
 
 const Comment = ({ data }) => {
   const { name, text, replies } = data;
-  console.log(name);
+//   console.log(name);
 
   return (
     <div className="pl-5 flex shadow-md bg-gray-100 p-2 ml-2 rounded-md my-2">

@@ -123,7 +123,7 @@ const Commentscontainer = ({ countcomment }) => {
     },
   ];
 
-  console.log(commentsdata);
+  // console.log(commentsdata);
 
   return (
     <div>
